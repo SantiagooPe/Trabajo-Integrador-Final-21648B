@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de Publicaciones</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Post</h1>
+        <form action="procesar_publicacion.php" method="POST">
+            <div class="form-group">
+                <label for="titulo">Título:</label>
+                <input type="text" class="form-control" id="titulo" name="titulo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contenido">Contenido:</label>
+                <textarea class="form-control" id="contenido" name="contenido" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="imagen">Enlace de imagen (URL):</label>
+                <input type="url" class="form-control" id="imagen" name="imagen">
+            </div>
+
+            <div class="form-group">
+                <label for="fecha">Fecha de creación:</label>
+                <input type="date" class="form-control" id="fecha" name="fecha" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
+    </div>
+</body>
+</html>
